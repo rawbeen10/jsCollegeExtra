@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Creating a list using js.</h1>
+
+    <script>
+
+        let items = ["Item 1", "Item 2", "Item 3"]
+
+
+        let divCreate = document.createElement("div")
+        divCreate.setAttribute('id','container')
+
+        document.body.appendChild(divCreate)
+           
+        let ul = document.createElement("ul")
+        items.forEach(function(item){
+            let listItems = document.createElement("li")
+            listItems.textContent = item
+
+            ul.appendChild(listItems)
+        })
+        divCreate.appendChild(ul)
+                
+    </script>
+</body>
+</html>
